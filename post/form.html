@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página para criar uma nova postagem com texto, imagem e vídeo.">
+    <title>Criar Nova Postagem</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <main>
+        <section class="postagem">
+            <h1>Criar Nova Postagem</h1>
+            
+            <form action="upload.php" method="POST" enctype="multipart/form-data" aria-labelledby="form-title">
+                <div class="input-group">
+                    <label for="texto">Escreva seu pensamento:</label>
+                    <textarea id="texto" name="texto" rows="4" placeholder="Escreva algo aqui..." aria-required="true"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="foto">Selecione uma foto (opcional):</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </div>
+
+                <div class="input-group">
+                    <label for="video">Selecione um vídeo (opcional):</label>
+                    <input type="file" id="video" name="video" accept="video/*">
+                </div>
+
+                <button type="submit" aria-label="Postar conteúdo">Postar</button>
+            </form>
+
+            <a href="../PHP/fy.php" class="back-link">Voltar para a página inicial</a>
+        </section>
+    </main>
+</body>
+</html>
